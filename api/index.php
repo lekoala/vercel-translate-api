@@ -43,4 +43,14 @@ $app->get('/translate/{to}[/{from}]', function (ServerRequest $request, Response
         ->withHeader('Content-Type', 'application/json');
 });
 
+$app->get('/', function (ServerRequest $request, Response $response, array $args) {
+    $arr = [
+        'welcome' => 'Please call /translate/{to}[/{from}]?text=your_url_encoded_text'
+    ];
+    $payload = json_encode($arr);
+    $response->getBody()->write($payload);
+    return $response
+        ->withHeader('Content-Type', 'application/json');
+});
+
 $app->run();
