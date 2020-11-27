@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="App">
+    <description>CodeSniffer ruleset.</description>
+
+    <!-- Don't sniff third party libraries -->
+    <exclude-pattern>*/vendor/*</exclude-pattern>
+    <exclude-pattern>*/thirdparty/*</exclude-pattern>
+
+    <!-- include php files only -->
+    <arg name="extensions" value="php"/>
+
+    <!-- Show progress and output sniff names on violation, and add colours -->
+    <arg value="sp"/>
+    <arg name="colors"/>
+
+    <!-- base rules are PSR-2 -->
+    <rule ref="PSR2">
+        <exclude name="PSR2.ControlStructures.ControlStructureSpacing" />
+        <exclude name="Generic.Files.LineLength.TooLong" />
+    </rule>
+</ruleset>

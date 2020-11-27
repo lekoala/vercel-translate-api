@@ -1,0 +1,29 @@
+{
+    "name": "lekoala/vercel-translate-api",
+    "description": "A simple google translate api proxy",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Thomas",
+            "email": "thomas@lekoala.be"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "slim/slim": "^4.6",
+        "slim/psr7": "^1.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "scripts": {
+        "serve": [
+            "echo Please visit http://localhost:9999",
+            "php -S localhost:9999 -t api/"
+        ]
+    }
+}

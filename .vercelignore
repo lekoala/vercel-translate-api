@@ -1,0 +1,5 @@
+# https://vercel.com/guides/prevent-uploading-sourcepaths-with-vercelignore
+# These files are not required to be deployed on the edge
+.env
+/vendor
+/docs
